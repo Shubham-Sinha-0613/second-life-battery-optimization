@@ -1,76 +1,61 @@
 # Second-Life Battery Techno-Economic Optimization  
 *(Industry Project – Non-Confidential Summary)*
 
-## Overview
+## Project Context
 
-This project develops a techno-economic optimization framework to evaluate the deployment of second-life electric vehicle (EV) batteries in industrial and commercial energy systems.
+Developed a techno-economic optimization framework to evaluate deployment of second-life EV batteries in industrial energy systems.
 
-The objective is to determine optimal battery sizing and dispatch strategy under real load demand and tariff structures, while incorporating degradation-aware operational constraints.
-
-The model is implemented in Python using Mixed Integer Linear Programming (MILP) and solved using Gurobi.
+This work was conducted under a Non-Disclosure Agreement (NDA).  
+Source code, datasets, and proprietary parameters are not publicly available.
 
 ---
 
-## Problem Statement
+## Objective
 
-With increasing EV adoption, large volumes of batteries reach end-of-vehicle life while still retaining usable capacity. These second-life batteries present a lower-cost alternative to new energy storage systems.
+To determine the optimal dispatch strategy for second-life battery systems under:
 
-However, their economic viability depends on:
-
-- Industrial load profile characteristics  
-- Electricity tariff structure (time-of-use pricing)  
-- Operational dispatch strategy  
-- Degradation behavior over time  
-- Capital investment constraints  
-
-This project formulates an optimization model to evaluate whether second-life batteries can provide cost-effective peak shaving and energy arbitrage in industrial environments.
+- Industrial load demand profiles  
+- Time-of-Use (TOU) electricity tariffs  
+- Operational degradation constraints  
+- Capital investment considerations  
 
 ---
 
 ## Optimization Framework
 
-A Linear Programming (LP) model was developed using Python and Gurobi.
+- Linear Programming (LP) formulation  
+- Continuous decision variables  
+- Convex structure with global optimality  
+- Implemented in Python using Gurobi  
 
-### Core Modeling Components
-
-- Hourly industrial load demand modeling  
-- Time-of-use tariff integration  
-- State-of-Charge (SOC) tracking  
-- Charging/discharging power limits  
-- Energy capacity constraints  
-- Degradation modeled as operational throughput constraint  
-
-All decision variables were continuous.
+Degradation was modeled as a throughput constraint to extend effective battery lifetime.
 
 ---
 
-## Objective Function
+## Key Outcomes
 
-Minimize total annualized system cost:
-
-Battery Investment Cost + Grid Electricity Cost − Arbitrage Savings
-
----
-
-## Key Results
-
-- ~35% effective extension in usable battery lifetime  
-- Improved peak load shaving performance  
-- Identified tariff differential thresholds required for positive return on investment  
-- Demonstrated sensitivity of economic viability to degradation limits  
+- ~35% extension in effective battery lifetime  
+- Improved industrial peak shaving performance  
+- Identification of tariff spread thresholds for economic viability  
+- Sensitivity analysis on degradation and tariff assumptions  
 
 ---
 
-## Technical Stack
+## System Architecture
 
-- Python  
-- Gurobi Optimizer  
-- NumPy / Pandas  
-- Matplotlib  
+![Optimization Architecture](architecture.png)
 
 ---
 
-## Professional Note
+## Technical Documentation
 
-This repository demonstrates optimization architecture and engineering methodology only.  
-Implementation details and datasets are confidential.
+For full mathematical formulation, modeling assumptions, and engineering insights, see:
+
+➡ **[TECHNICAL_SUMMARY.md](TECHNICAL_SUMMARY.md)**
+
+---
+
+## Confidentiality Notice
+
+This repository provides a conceptual and methodological overview only.  
+Implementation details and datasets remain confidential.
